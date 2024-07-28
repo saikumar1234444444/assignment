@@ -1,0 +1,188 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #f5f5f5;
+  transform: translateX(-100%);
+  transition: 0.2s;
+  z-index: 1;
+  padding-left: 10px;
+  padding-right: 5px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 290px;
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.bgImage {
+  background-image: url("../assets/bgImage.png");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: "100%";
+  flex-grow: 1;
+}
+.moveBg {
+  margin-left: 300px;
+}
+
+@media screen and (max-width: 400px) {
+  .moveBg {
+    margin-left: 0px;
+  }
+}
+
+.openButton {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.closeButton {
+  position: absolute;
+  top: 100px;
+  z-index: 2000;
+  left: 290px;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 400px) {
+  .closeButton {
+    display: none;
+  }
+}
+.heading {
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+.title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 6px;
+}
+.description {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 5px;
+  margin-top: 30px;
+}
+.info {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 400px) {
+  .info {
+    width: 280px;
+  }
+}
+
+.read {
+  color: #c25b35;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.collection {
+  background-color: #c25b35;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 5px;
+  box-shadow: 0 3px 2px 2px lightgrey;
+}
+.souvenir {
+  background-color: transparent;
+  border: 2px solid #c25b35;
+  border-radius: 3px;
+  color: #c25b35;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 5px;
+  box-shadow: 0 3px 2px 2px lightgrey;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.iconBox {
+  background-color: #f0f0f0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.iconsBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.iconText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iconBoxSmall {
+  background-color: #f0f0f0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.readIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.bgContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 0;
+}
