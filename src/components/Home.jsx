@@ -23,6 +23,7 @@ const data = [
 
 const Home = () => {
   const [isOpen, setIsopen] = React.useState(false);
+  const[isShow, setIsshown]=React.useState(true)
   const openSidebar = () => {
     setIsopen(true);
   };
@@ -30,6 +31,10 @@ const Home = () => {
   const closeSidebar = () => {
     setIsopen(false);
   };
+
+  const showMoreText=()=>{
+    setIsshown(!isShow)
+  }
   return (
     <div className="bgContainer">
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
@@ -62,11 +67,13 @@ const Home = () => {
           (sapta-manushi Buddhas). The Digha Nikaya mentions, Maitreya Buddha
           will be born in Ketumati, in present-day Varanasi, Uttar Pradesh. As a
           bodhisattva, Maitreya wears a heavily adorned with earrings,
-          wristlets, necklaces, and an amulet.
+          <span className={`moreText ${!isShow? 'show':''}`}>The Digha Nikaya mentions, Maitreya Buddha
+          will be born in Ketumati, in present-day Varanasi, Uttar Pradesh. As a
+          bodhisattva, Maitreya wears a heavily adorned with earrings and money.</span>
         </p>
         <div className="readIcon">
           <EastOutlinedIcon style={{ color: "#C25B35" }} />
-          <h1 className="read">READ MORE</h1>
+          <h1 className="read" onClick={showMoreText}>{!isShow? 'READ LESS':'READ MORE'}</h1>
         </div>
         <div className="buttonContainer">
           <button type="button" className="collection">

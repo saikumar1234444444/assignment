@@ -6,7 +6,7 @@
   height: 100vh;
   background-color: #f5f5f5;
   transform: translateX(-100%);
-  transition: 0.2s;
+  transition: 0.9s ease;
   z-index: 1;
   padding-left: 10px;
   padding-right: 5px;
@@ -33,14 +33,17 @@
   justify-content: center;
   width: "100%";
   flex-grow: 1;
+  transition: 0.9s ease;
 }
 .moveBg {
   margin-left: 300px;
+  transition: 0.9s ease;
 }
 
 @media screen and (max-width: 400px) {
   .moveBg {
     margin-left: 0px;
+    transition: 0.9s ease;
   }
 }
 
@@ -58,6 +61,7 @@
 }
 .closeButton {
   position: absolute;
+  transition: 0.9s ease;
   top: 100px;
   z-index: 2000;
   left: 290px;
@@ -106,6 +110,7 @@
   color: #c25b35;
   font-size: 16px;
   letter-spacing: 3px;
+  cursor:pointer;
 }
 .collection {
   background-color: #c25b35;
@@ -185,4 +190,14 @@
   width: 100%;
   justify-content: flex-start;
   gap: 0;
+  background-color: #f5f5f5;
 }
+
+.moreText{
+  display:none;
+}
+
+.show{
+  display:block;
+}
+
